@@ -1,0 +1,1 @@
+#arreter service non besoin avec systemctl disable <service>
