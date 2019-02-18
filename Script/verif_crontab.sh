@@ -1,11 +1,11 @@
 tmp="/root/Script/tmp"
 cron="/root/Script/cron"
 crontab -l > $cron
-
-if [ "`cat -e $tmp`" != "`cat -e $cron`" ]
+#cat -e $cron
+if [ "`diff $tmp $cron`" != '' ]
 then
-    echo "crontab change" | sudo /usr/sbin/sendmail root
-    
+    echo "crontab change" #| sudo /usr/sbin/sendmail root
+    cat $cron > $tmp
 else
     echo "not change"
 fi
