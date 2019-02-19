@@ -16,9 +16,11 @@
 # For example, you can run a backup of all your user accounts
 # at 5 a.m every week with:
 # 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
-#   
+# 
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-0 4 * * 1  root	     /home/USER/update_script.sh  >> /var/log/update_script.log
-@reboot	   root	     /home/USER/update_script.sh  >> /var/log/update_script.log
+0 4 * * 1 root /root/Script/update.sh  >> /var/log/update_script.log
+@reboot	  root /root/Script/update.sh  >> /var/log/update_script.log
+0 0 * * * root /root/Script/verif_crontab.sh
+
