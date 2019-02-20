@@ -1,1 +1,11 @@
-#arreter service non besoin avec systemctl disable <service>
+dbus-org.freedesktop.ModemManager1.service	=> Network service
+dbus-org.freedesktop.nm-dispatcher.service	=> Gestion de reparateur
+display-manager.service				=> interface graphique(home machine)
+lightdm.service					=> interface graphique de bureau
+lm-sensors.service				=> outil surveille systeme (temperature, voltage etc)
+network*					=> gestion pour network
+rsync.service					=> synchronisation
+rtkit-daemon.service				=> planificateur du noyau en temps reel
+systemd-timesyncd.service			=> synchronisation du temps
+remote-fs.target				=> lier au systeme
+
